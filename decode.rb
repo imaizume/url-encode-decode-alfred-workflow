@@ -1,5 +1,6 @@
 require 'json'
 require 'uri'
+require './create_result'
 
 encoded_uri = ARGV[0].chomp
 begin
@@ -10,35 +11,7 @@ rescue
   title = "invalid format"
 end
 
-result = {
-  skipknowledge: true,
-  items: [
-    title: title,
-    subtitle: "Press Enter to Copy",
-    arg: url,
-    valid: !url.empty?,
-    autocomplete: url,
-    icon: {
-      path: "./icon.png"
-    }
-  ]
-}
+result = create_result title, url
 
-begin
-  json = result.to_json.encode("UTF-8")
-rescue
-  result[:items] = {
-    title: "Failed to convert to JSON",
-    subtitle: "Failed to convert to JSON",
-    arg: "",
-    valid: !url.empty?,
-    autocomplete: url,
-    icon: {
-      path: "./icon.png"
-    }
-  }
-  json = result.to_json.encode("UTF-8")
-end
-
-puts json
+puts result.to_json
 
