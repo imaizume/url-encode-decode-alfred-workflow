@@ -1,9 +1,17 @@
+require 'json'
 require 'uri'
+require './create_result'
 
-encoded_uri = ARGV[0].chomp
+decoded_uri = ARGV[0].chomp
 begin
-  puts URI.decode_www_form_component(encoded_uri)
+  url = URI.encode_www_form_component(decoded_uri, enc = "UTF-8")
+  title = "encoded into: #{url}"
 rescue
-  puts ""
+  url = ""
+  title = "invalid format"
 end
+
+result = create_result title, url
+
+puts result.to_json
 
