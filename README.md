@@ -11,14 +11,14 @@ A simple alfred workflow to encode and decode url and copy to clipboard.
 
 ### Encoding
 
-![Encode Japanese](https://github.com/imaizume/url-encode-decode-alfred-workflow/blob/main/img/encode_Japanese.png?raw=true)
+![Encode Japanese](https://github.com/imaizume/url-encode-decode-alfred-workflow/blob/main/img/encode_japanese.png?raw=true)
 
 Open Alfred and type command `encode`.
 Then type or paste string which you want to encode.
 
 ### Decoding
 
-![Decode Japanese](https://github.com/imaizume/url-encode-decode-alfred-workflow/blob/main/img/decode_Japanese.png?raw=true)
+![Decode Japanese](https://github.com/imaizume/url-encode-decode-alfred-workflow/blob/main/img/decode_japanese.png?raw=true)
 
 Open Alfred and type command `decode`.
 Then type or paste string which you want to decode.
